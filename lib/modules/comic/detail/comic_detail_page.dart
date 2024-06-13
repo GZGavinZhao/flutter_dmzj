@@ -194,8 +194,8 @@ class ComicDetailPage extends StatelessWidget {
               children: [
                 NetImage(
                   controller.detail.value.cover,
-                  width: 120,
-                  height: 160,
+                  width: 150,
+                  height: 200,
                   borderRadius: 4,
                 ),
                 AppStyle.hGap12,
@@ -209,6 +209,11 @@ class ComicDetailPage extends StatelessWidget {
                         style: Get.textTheme.titleMedium,
                       ),
                       AppStyle.vGap8,
+
+                      _buildInfo(
+                        title: controller.detail.value.id.toString(),
+                        iconData: Remix.id_card_line,
+                      ),
 
                       _buildInfoItems(
                         iconData: Remix.user_smile_line,
